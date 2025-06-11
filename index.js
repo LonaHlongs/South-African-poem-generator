@@ -1,12 +1,26 @@
-function generatePoetry(event) {
-  event.preventDefault();
-
-  new Typewriter("#poetry", {
-    strings: "Imvelo Yinhle (Nature is Beautiful)",
+function displayPoetry(response) {
+    new Typewriter("#poetry", {
+    strings:response.data.answer,
     autoStart: true,
     delay: 1,
     cursor: "",
   });
+
+}
+
+
+
+function generatePoetry(event) {
+  event.preventDefault();
+
+  let formEntryInput = document.querySelector("#user-form-entry");
+  let apiKey = "od57b07td52499abaaad3f35534b700e";
+  let prompt = `Generate a South African poem about ${formEntryInput.value}`;
+  let context = "You are a cultural South African poet. You write short, 4 line, poems that reflect the beauty, diversity, and spirit of South Africa. Your poems are rich in imagery and emotion, capturing the essence of the country's landscapes, people, and traditions. The poem must be in basic HTML. Do NOT add HTML to the poem itself.";
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+  
+  axios.get(apiUrl).then(displayPoetry);
+  
 }
 
 let poetryFormElement = document.querySelector("#poetry-generator-form");

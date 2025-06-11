@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
    <link rel="stylesheet" href="style.css"> 
    <title>AI South African Poetry Generator</title>
     
@@ -17,7 +18,7 @@
 
     <main>
         <form id="poetry-generator-form">
-            <input type="text" placeholder="Enter the topic of your choice" autofocus required autocomplete="off" class="form-entry"/>
+            <input type="text" placeholder="Enter the topic of your choice" autofocus required autocomplete="off" class="form-entry" id="user-form-entry"/>
             <input type="submit"  class="submit-button"/>
         </form>
         <div class="poetry" id="poetry"></div>
