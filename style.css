@@ -26,15 +26,27 @@ h1 {
     text-align:center;
 }
 
+.form-container {
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+    margin-bottom: 50px;
+   
+} 
 
 form {
-    padding: 30px;
-    background: white;
-    border-radius: 10px;
+
     display: flex;
-    box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
-    margin-bottom: 30px;
 }
+
+.example {
+    line-height: 1.5;
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 10px;
+}
+
 .form-entry {
     padding: 16px;
     font-size: 16px;
@@ -47,8 +59,8 @@ form {
     margin-left: 10px;
     border-radius: 10px;
     font-size: 16px;
-    padding: 14px 24px;;
-    background: #65A30D;
+    padding: 14px;
+    background:#65A30D;
     color: white;
     border: 1px solid rgba(39, 33, 66, 0.5);
     width: 100px;
@@ -68,6 +80,11 @@ form {
     border-radius: 3px;
     border-left: 4px solid #65A30D;
     box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+    
+}
+
+.hidden {
+    display: none;
 }
 
 footer {
